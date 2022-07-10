@@ -2,9 +2,11 @@
 
 class Database
 {
+    public $link;
+
    public function connect()
    {
-        $link = mysqli_connect("localhost", "root", "");
+        $this->link = mysqli_connect("localhost", "root", "");
         mysqli_select_db($link, "class");
 
         if ($link == false) {
