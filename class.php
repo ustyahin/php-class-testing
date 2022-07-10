@@ -10,7 +10,7 @@ class Database
         mysqli_select_db($this->link, "class");
 
         if ($this->link == false) {
-            exit("Ошибка подключения к БД");
+            throw new Database('Нет подключения к БД');
         }
    } 
 };
